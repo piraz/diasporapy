@@ -22,8 +22,8 @@ from __future__ import (absolute_import, division, print_function,
 from Crypto.PublicKey import RSA
 import datetime
 from podship.models import UserBase
-from firenado.conf import load_yaml_config_file
-from firenado.core import service
+from firenado.config import load_yaml_config_file
+from firenado import service
 from firenado.util import random_string
 from passlib.hash import bcrypt
 from sqlalchemy.orm.exc import NoResultFound
@@ -132,7 +132,9 @@ class UserService(service.FirenadoService):
         # TODO: looks like this method is candidate to be part of some security
         # toolkit
 
-        RSAkey = RSA.generate(2048)
+        RSAkey = RSA.generate(4096)
+        print
+
 
         private_key = RSAkey.exportKey(
             format='PEM',
