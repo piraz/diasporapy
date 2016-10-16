@@ -23,7 +23,7 @@ import datetime
 from podship.services.user import UserService
 from podship.services.profile import ProfileService
 from podship.services.person import PersonService
-from firenado.core import service
+from firenado import service
 
 
 class AccountService(service.FirenadoService):

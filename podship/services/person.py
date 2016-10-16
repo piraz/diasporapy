@@ -21,7 +21,7 @@ from __future__ import (absolute_import, division, print_function,
 
 import datetime
 from podship.models import PersonBase
-from firenado.core import service
+from firenado import service
 import uuid
 
 
