@@ -1,0 +1,51 @@
+{
+  "name": "podship-platform",
+  "version": "0.0.1",
+  "description": "Podship platform",
+  "main": "main",
+  "repository": "https://github.com/candango/podship-platform",
+  "author": "Flavio Garcia",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "bootstrap": "3.3.7",
+    "can-component": "^3.0.7",
+    "can-compute": "^3.0.7",
+    "can-connect": "^1.3.10",
+    "can-define": "^1.0.17",
+    "can-deparam": "^1.0.1",
+    "can-event": "^3.3.0",
+    "can-fixture": "^1.0.13",
+    "can-jquery": "^3.0.6",
+    "can-map": "^3.0.7",
+    "can-route": "^3.0.8",
+    "can-route-pushstate": "^3.0.3",
+    "can-set": "^1.2.0",
+    "can-stache": "^3.0.21",
+    "can-stache-bindings": "^3.0.13",
+    "can-util": "^3.3.6",
+    "grunt": "^1.0.1",
+    "i18next": "7.2.1",
+    "i18next-xhr-backend": "1.4.1",
+    "jquery": "3.2.1",
+    "jquery-i18next": "1.2.0",
+    "steal": "1.4.1",
+    "steal-css": "1.2.2",
+    "steal-less": "1.2.0",
+    "steal-stache": "^3.0.5",
+    "steal-tools": "^1.3.6"
+  },
+  "scripts": {
+    "build": "steal-tools"
+  },
+  "steal": {
+    "bundle":[
+      "components/login/login",
+      "components/navbar/searchbox/searchbox"
+    ],
+    "plugins": [
+      "steal-css",
+      "steal-less",
+      "steal-stache"
+    ]
+  }
+}
