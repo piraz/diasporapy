@@ -497,6 +497,7 @@ class PersonBase(Base):
                             DefaultClause('False'), nullable=True)
     fetch_status = Column('fetch_status', Integer(), DefaultClause('0'),
                           nullable=True)
+    pod_id = Column('pod_id', Integer(), nullable=True)
 
 Index('idx_people_diaspora_handle', PersonBase.diaspora_handle, unique=True,
       postgresql_using='btree')
@@ -710,6 +711,8 @@ class ProfileBase(Base):
     location = Column('location', String(255), nullable=True)
     full_name = Column('full_name', String(70), nullable=True)
     nsfw = Column('nsfw', Boolean(), DefaultClause('false'), nullable=True)
+    public_details = Column('public_details', Boolean(),
+                            DefaultClause('false'), nullable=True)
 
 Index('idx_profiles_full_name', ProfileBase.full_name,
       postgresql_using='btree')
@@ -946,6 +949,7 @@ class UserBase(Base):
     reset_password_sent_at = Column('reset_password_sent_at', TIMESTAMP(),
                                     nullable=True)
     last_seen = Column('last_seen', TIMESTAMP(), nullable=True)
+
     remove_after = Column('remove_after', TIMESTAMP(), nullable=True)
     export = Column('export', String(255), nullable=True)
     exported_at = Column('exported_at', TIMESTAMP(), nullable=True)
