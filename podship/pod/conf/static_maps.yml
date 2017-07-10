@@ -1,0 +1,9 @@
+maps:
+  - name: static
+    root: ..
+    handlers:
+      - name: "assets"
+        handler: "/assets/(.*)"
+        map_on_path: true
+        name_on_path: false
+

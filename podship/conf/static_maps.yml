@@ -1,0 +1,39 @@
+maps:
+  - name: static
+    handlers:
+      - name: "components"
+        handler: "/assets/components/(.*)"
+        map_on_path: true
+        name_on_path: true
+      - name: "fixtures"
+        handler: "/assets/fixtures/(.*)"
+        map_on_path: true
+        name_on_path: true
+      - name: "stylesheets"
+        handler: "/assets/stylesheets/(.*)"
+        map_on_path: true
+        name_on_path: true
+      - name: "index.html"
+        handler: "/assets/(index\\.html)"
+        map_on_path: true
+        name_on_path: false
+      - name: "locale.js"
+        handler: "/assets/(locale\\.js)"
+        map_on_path: true
+        name_on_path: false
+      - name: "stealconfig.js"
+        handler: "/assets/(stealconfig\\.js)"
+        map_on_path: true
+        name_on_path: false
+  - name: node_modules
+    handlers:
+      - name: "node_modules"
+        handler: "/assets/node_modules/(.*)"
+        map_on_path: true
+        name_on_path: false
+  - name: package.json
+    handlers:
+      - name: "package.json"
+        handler: "/assets/(package\\.json)"
+        map_on_path: false
+        name_on_path: false
