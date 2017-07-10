@@ -1,0 +1,38 @@
+<div id="searchComponent">
+<form  id="searchDropdownForm" class="navbar-form navbar-right" role="search">
+    <div id="searchDropdown" class="btn-group input-group" role="group">
+        <input type="text" id="searchQuery" data-toggle="dropdown" class="form-control dropdown-toggle" autocomplete="off" data-i18n="[placeholder]common.search;">
+        <div class="input-group-btn">
+            <button id="searchQueryButton" class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+        </div>
+        <div id="searchDropdownMenu" class="dropdown-menu dropdown-menu-left dropdown-search" role="menu">
+            <div class="list-group">
+                {{#searched}}
+                {{#hasResults}}
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">Results</h4>
+                        <p class="list-group-item-text">...</p>
+                    </a>
+                    {{#results}}
+                        <a href="#" class="list-group-item">
+                            <img src="{{img}}"> {{label}}
+                        </a>
+                    {{/results}}
+                {{/hasResults}}
+                {{^hasResults}}
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">No results</h4>
+                        <p class="list-group-item-text">Sorry pal. Next time.</p>
+                    </a>
+                {{/hasResults}}
+                {{/searched}}
+                {{#isLoading}}
+                    <div href="#" class="list-group-item text-center">
+                        <p class="list-group-item-text">Loading...</p>
+                    </div>
+                {{/isLoading}}
+            </div>
+        </div>
+    </div>
+</form>
+</div>
